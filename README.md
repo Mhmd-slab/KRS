@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>متجر KRS لقطع التعديل والتزويد</title><img src="images/logo.png" alt="شعار KRS" style="width: 120px; height: auto; margin-bottom: 10px;" />
+  <title>متجر KRS لقطع التعديل والتزويد</title>
 
   <style>
     body {
@@ -176,8 +176,7 @@
     </a>
   </div>
   <br>
-  <div>جميع الحقوق محفوظة © متجر KRS</div 2025>
-</footer> 2025
+  <div>جميع الحقوق محفوظة © متجر KRS</div 2025
 
 
 
