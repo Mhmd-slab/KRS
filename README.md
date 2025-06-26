@@ -2,7 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>متجر KRS لقطع التعديل والتزويد</title>
+  <title>متجر KRS لقطع التعديل والتزويد</title><img src="images/logo.png" alt="شعار KRS" style="width: 120px; height: auto; margin-bottom: 10px;" />
+
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
