@@ -1,6 +1,6 @@
 
 <html lang="ar" dir="rtl">
-<head>
+<head><img src="images/logo.jpg" …>
   <meta charset="UTF-8">
   <title>متجر KRS لقطع التعديل والتزويد</title>
 
