@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>متجر KRS</title>
+  <style>
+    .brands {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+    .brand-item {
+      text-align: center;
+    }
+    .brand-item img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    .brand-item span {
+      font-weight: bold;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 style="text-align:center;">مرحبًا بك في متجر KRS</h1>
+
+  <h2 style="text-align:center;">شعارات البراندات</h2>
+  <div class="brands">
+    <div class="brand-item">
+      <img src="images/BTR.jpg" alt="BTR">
+      <span>BTR</span>
+    </div>
+    <div class="brand-item">
+      <img src="images/aFe.jpg" alt="aFe">
+      <span>aFe</span>
+    </div>
+  </div>
+
+</body>
+</html>
