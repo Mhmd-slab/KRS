@@ -4,147 +4,94 @@
   <meta charset="UTF-8" />
   <title>متجر KRS لقطع التعديل والتزويد</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      margin: 0;
-      padding: 20px;
-      color: #333333;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    header h1 {
-      margin: 0 0 8px 0;
-      font-size: 30px;
-      color: #222222;
-    }
-    header p.description {
-      margin: 0;
-      font-size: 18px;
-      color: #555555;
-      font-weight: normal;
-    }
-    .contact {
-      text-align: center;
-      font-size: 16px;
-      margin-bottom: 30px;
-      color: #444444;
-    }
-    .brands-list {
-      max-width: 600px;
-      margin: 0 auto 40px auto;
-      background-color: #ffffff;
-      border-radius: 8px;
-      padding: 20px 30px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
-      line-height: 1.7;
-      font-size: 16px;
-      color: #222222;
-    }
-    .brands-list h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      font-size: 24px;
-      color: #0077cc;
-      font-weight: 600;
-    }
-    .brands-list ol {
-      padding-left: 20px;
-      margin: 0;
-    }
-    .brands-list li {
-      margin-bottom: 8px;
-    }
-    footer {
-      text-align: center;
-      font-size: 14px;
-      color: #666666;
-      border-top: 1px solid #dddddd;
-      padding-top: 20px;
-      direction: rtl;
-      font-weight: normal;
-    }
-    footer a {
-      color: #0077cc;
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: normal;
-    }
-    footer a:hover,
-    footer a:focus {
-      text-decoration: underline;
-    }
+    body{font-family:Arial,sans-serif;background:#f9f9f9;margin:0;padding:20px;color:#333}
+    header{text-align:center;margin-bottom:25px}
+    header h1{margin:0 0 6px;font-size:28px;color:#222}
+    header p{margin:0;font-size:16px;color:#555}
+    .contact{text-align:center;font-size:15px;margin-bottom:30px;color:#444}
+    .contact a{color:#0077cc;text-decoration:none;margin:0 5px}
+    .contact a:hover{text-decoration:underline}
+    .brands-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:18px;max-width:1100px;margin:0 auto 40px}
+    .brand-box{background:#fff;border-radius:10px;padding:12px 6px;text-align:center;box-shadow:0 0 6px rgba(0,0,0,.12);text-decoration:none;color:#222;transition:.25s}
+    .brand-box:hover{transform:translateY(-5px);box-shadow:0 6px 14px rgba(0,0,0,.18)}
+    .brand-box img{width:85px;height:85px;object-fit:contain;margin-bottom:8px}
+    .brand-box span{display:block;font-size:14px;font-weight:600}
+    footer{text-align:center;font-size:14px;color:#666;border-top:1px solid #ddd;padding-top:20px}
+    footer a{color:#0077cc;text-decoration:none;margin:0 8px}
+    footer a:hover{text-decoration:underline}
   </style>
 </head>
 <body>
 
 <header>
+  <!-- أضف شعار المتجر هنا إن وجد -->
+  <!-- <img src="images/logo.png" alt="شعار المتجر" width="150"> -->
   <h1>متجر KRS لقطع التعديل والتزويد</h1>
-  <p class="description">تعديل وتزويد المحركات الأمريكي</p>
+  <p>تعديل وتزويد المحركات الأمريكي</p>
 </header>
 
+<!-- أرقام واتساب مباشرة -->
 <div class="contact">
-  <p><strong>أرقام التواصل:</strong> 0544298850 / 0504214480 / 0548420912</p>
+  <strong>أرقام التواصل عبر واتساب:</strong><br>
+  <a href="https://wa.me/966544298850" target="_blank">0544298850</a> /
+  <a href="https://wa.me/966504214480" target="_blank">0504214480</a> /
+  <a href="https://wa.me/966548420912" target="_blank">0548420912</a>
 </div>
 
-<section class="brands-list" aria-label="قائمة البرندات والشركات المصنعة للقطع">
-  <h2>قائمة البرندات والشركات المصنعة للقطع</h2>
-  <ol>
-    <li>MSD</li>
-    <li>EXCEED</li>
-    <li>BTR</li>
-    <li>TEXAS SPEED</li>
-    <li>aFe</li>
-    <li>VCM</li>
-    <li>LUCAS زيوت</li>
-    <li>EPMAN اقفال كبوت</li>
-    <li>ARP</li>
-    <li>AEM</li>
-    <li>MAHLE</li>
-    <li>ACDELCO</li>
-    <li>NGK</li>
-    <li>LINGENFELTER</li>
-    <li>GM</li>
-    <li>ROLLMASTER</li>
-    <li>VP</li>
-    <li>BOSCH</li>
-    <li>SPECTRE</li>
-    <li>BOOST</li>
-    <li>Super Pro</li>
-    <li>PAC</li>
-    <li>Dicom</li>
-    <li>POWER</li>
-    <li>TI Automotive</li>
-    <li>MELLING</li>
-    <li>AEROMOTIVE</li>
-    <li>FTE</li>
-    <li>K&amp;N</li>
-    <li>Lufii</li>
-    <li>SNOW</li>
-    <li>McLeod</li>
-    <li>TCL</li>
-    <li>DRC</li>
-    <li>BILSTEIN</li>
-    <li>COMETIC</li>
-    <li>Hptuners</li>
-    <li>King Springs</li>
-    <li>VOGTLAND</li>
-    <li>SCT X4</li>
-    <li>MOPAR</li>
-    <li>LUkRepSet</li>
-  </ol>
-</section>
+<!-- شبكة البراندات -->
+<div class="brands-grid">
+  <a class="brand-box" href="brands/msd.html"><img src="images/msd/logo.png" alt="MSD"><span>MSD</span></a>
+  <a class="brand-box" href="brands/exceed.html"><img src="images/exceed/logo.png" alt="EXCEED"><span>EXCEED</span></a>
+  <a class="brand-box" href="brands/btr.html"><img src="images/btr/logo.png" alt="BTR"><span>BTR</span></a>
+  <a class="brand-box" href="brands/texasspeed.html"><img src="images/texasspeed/logo.png" alt="TEXAS SPEED"><span>TEXAS SPEED</span></a>
+  <a class="brand-box" href="brands/afe.html"><img src="images/afe/logo.png" alt="aFe"><span>aFe</span></a>
+  <a class="brand-box" href="brands/vcm.html"><img src="images/vcm/logo.png" alt="VCM"><span>VCM</span></a>
+  <a class="brand-box" href="brands/lucas.html"><img src="images/lucas/logo.png" alt="LUCAS"><span>LUCAS</span></a>
+  <a class="brand-box" href="brands/epman.html"><img src="images/epman/logo.png" alt="EPMAN"><span>EPMAN</span></a>
+  <a class="brand-box" href="brands/arp.html"><img src="images/arp/logo.png" alt="ARP"><span>ARP</span></a>
+  <a class="brand-box" href="brands/aem.html"><img src="images/aem/logo.png" alt="AEM"><span>AEM</span></a>
+  <a class="brand-box" href="brands/mahle.html"><img src="images/mahle/logo.png" alt="MAHLE"><span>MAHLE</span></a>
+  <a class="brand-box" href="brands/acdelco.html"><img src="images/acdelco/logo.png" alt="ACDELCO"><span>ACDELCO</span></a>
+  <a class="brand-box" href="brands/ngk.html"><img src="images/ngk/logo.png" alt="NGK"><span>NGK</span></a>
+  <a class="brand-box" href="brands/lingenfelter.html"><img src="images/lingenfelter/logo.png" alt="LINGENFELTER"><span>LINGENFELTER</span></a>
+  <a class="brand-box" href="brands/gm.html"><img src="images/gm/logo.png" alt="GM"><span>GM</span></a>
+  <a class="brand-box" href="brands/rollmaster.html"><img src="images/rollmaster/logo.png" alt="ROLLMASTER"><span>ROLLMASTER</span></a>
+  <a class="brand-box" href="brands/vp.html"><img src="images/vp/logo.png" alt="VP"><span>VP</span></a>
+  <a class="brand-box" href="brands/bosch.html"><img src="images/bosch/logo.png" alt="BOSCH"><span>BOSCH</span></a>
+  <a class="brand-box" href="brands/spectre.html"><img src="images/spectre/logo.png" alt="SPECTRE"><span>SPECTRE</span></a>
+  <a class="brand-box" href="brands/boost.html"><img src="images/boost/logo.png" alt="BOOST"><span>BOOST</span></a>
+  <a class="brand-box" href="brands/superpro.html"><img src="images/superpro/logo.png" alt="Super Pro"><span>Super Pro</span></a>
+  <a class="brand-box" href="brands/pac.html"><img src="images/pac/logo.png" alt="PAC"><span>PAC</span></a>
+  <a class="brand-box" href="brands/dicom.html"><img src="images/dicom/logo.png" alt="Dicom"><span>Dicom</span></a>
+  <a class="brand-box" href="brands/power.html"><img src="images/power/logo.png" alt="POWER"><span>POWER</span></a>
+  <a class="brand-box" href="brands/tiautomotive.html"><img src="images/tiautomotive/logo.png" alt="TI Automotive"><span>TI Automotive</span></a>
+  <a class="brand-box" href="brands/melling.html"><img src="images/melling/logo.png" alt="MELLING"><span>MELLING</span></a>
+  <a class="brand-box" href="brands/aeromotive.html"><img src="images/aeromotive/logo.png" alt="AEROMOTIVE"><span>AEROMOTIVE</span></a>
+  <a class="brand-box" href="brands/fte.html"><img src="images/fte/logo.png" alt="FTE"><span>FTE</span></a>
+  <a class="brand-box" href="brands/kn.html"><img src="images/kn/logo.png" alt="K&N"><span>K&amp;N</span></a>
+  <a class="brand-box" href="brands/lufii.html"><img src="images/lufii/logo.png" alt="Lufii"><span>Lufii</span></a>
+  <a class="brand-box" href="brands/snow.html"><img src="images/snow/logo.png" alt="SNOW"><span>SNOW</span></a>
+  <a class="brand-box" href="brands/mcleod.html"><img src="images/mcleod/logo.png" alt="McLeod"><span>McLeod</span></a>
+  <a class="brand-box" href="brands/tcl.html"><img src="images/tcl/logo.png" alt="TCL"><span>TCL</span></a>
+  <a class="brand-box" href="brands/drc.html"><img src="images/drc/logo.png" alt="DRC"><span>DRC</span></a>
+  <a class="brand-box" href="brands/bilstein.html"><img src="images/bilstein/logo.png" alt="BILSTEIN"><span>BILSTEIN</span></a>
+  <a class="brand-box" href="brands/cometic.html"><img src="images/cometic/logo.png" alt="COMETIC"><span>COMETIC</span></a>
+  <a class="brand-box" href="brands/hptuners.html"><img src="images/hptuners/logo.png" alt="Hptuners"><span>Hptuners</span></a>
+  <a class="brand-box" href="brands/kingsprings.html"><img src="images/kingsprings/logo.png" alt="King Springs"><span>King Springs</span></a>
+  <a class="brand-box" href="brands/vogtland.html"><img src="images/vogtland/logo.png" alt="VOGTLAND"><span>VOGTLAND</span></a>
+  <a class="brand-box" href="brands/sctx4.html"><img src="images/sctx4/logo.png" alt="SCT X4"><span>SCT X4</span></a>
+  <a class="brand-box" href="brands/mopar.html"><img src="images/mopar/logo.png" alt="MOPAR"><span>MOPAR</span></a>
+  <a class="brand-box" href="brands/lukrepset.html"><img src="images/lukrepset/logo.png" alt="LUkRepSet"><span>LUkRepSet</span></a>
+</div>
 
 <footer>
-  <p>تواصل معنا عبر منصات التواصل الاجتماعي:</p>
+  <p>تواصل معنا عبر منصات التواصل:</p>
   <p>
-    <a href="https://www.youtube.com/@KhalidRacingShop" target="_blank" rel="noopener noreferrer">يوتيوب</a> |
-    <a href="https://www.snapchat.com/add/khaledqadi2002?share_id=dhvVgBtkZps&locale=ar-SA" target="_blank" rel="noopener noreferrer">سناب شات</a> |
-    <a href="https://x.com/KhalidRacing?t=Iv0he1gf6E7MR-_tBkChlQ&s=09" target="_blank" rel="noopener noreferrer">تويتر</a> |
-    <a href="https://www.instagram.com/kldss?igsh=MWJnbmUweXg4bnlocQ==" target="_blank" rel="noopener noreferrer">إنستقرام</a> |
-    <a href="https://haraj.com.sa/users/kld-dk" target="_blank" rel="noopener noreferrer">موقع حراج</a>
+    <a href="https://www.youtube.com/@KhalidRacingShop" target="_blank">يوتيوب</a> |
+    <a href="https://www.snapchat.com/add/khaledqadi2002?share_id=dhvVgBtkZps&locale=ar-SA" target="_blank">سناب شات</a> |
+    <a href="https://x.com/KhalidRacing" target="_blank">تويتر</a> |
+    <a href="https://www.instagram.com/kldss" target="_blank">إنستقرام</a> |
+    <a href="https://haraj.com.sa/users/kld-dk" target="_blank">حراج</a>
   </p>
 </footer>
 
