@@ -5,6 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>متجر KRS لقطع التعديل والتزويد</title>
 <style>
+  /* Reset بسيط */
+  * {
+    box-sizing: border-box;
+  }
+
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f5f7fa;
@@ -32,6 +37,7 @@
     font-weight: 400;
   }
 
+  /* بحث */
   .search-container {
     max-width: 480px;
     margin: 20px auto 35px;
@@ -53,6 +59,7 @@
     box-shadow: 0 0 6px rgba(41, 128, 185, 0.4);
   }
 
+  /* الحاوية الرئيسية للبراندات */
   .brands-container {
     max-width: 1100px;
     margin: 0 auto 40px;
@@ -61,6 +68,7 @@
     gap: 22px;
   }
 
+  /* مربع كل براند */
   .brand-box {
     background: #fff;
     border-radius: 12px;
@@ -93,6 +101,7 @@
     font-size: 1rem;
   }
 
+  /* التواصل الاجتماعي */
   footer {
     max-width: 1100px;
     margin: 0 auto;
@@ -108,13 +117,13 @@
   }
 
   .social-links a {
-    margin: 0 12px;
+    margin: 0 10px;
     text-decoration: none;
     color: #34495e;
     font-weight: 600;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
   }
 
   .social-links a:hover {
@@ -122,10 +131,11 @@
   }
 
   .social-links img {
-    width: 26px;
-    height: 26px;
+    width: 22px;
+    height: 22px;
   }
 
+  /* أرقام التواصل */
   .contact-info {
     margin-bottom: 25px;
     font-size: 1.1rem;
@@ -136,9 +146,6 @@
     font-weight: 600;
     text-decoration: none;
     margin: 0 8px;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
   }
 
   .contact-info a:hover {
@@ -147,10 +154,12 @@
 
   .whatsapp-icon {
     vertical-align: middle;
-    width: 26px;
-    height: 26px;
+    width: 22px;
+    height: 22px;
+    margin-left: 6px;
   }
 
+  /* Responsive */
   @media (max-width: 480px) {
     header h1 {
       font-size: 1.8rem;
@@ -176,13 +185,13 @@
 <div class="contact-info" aria-label="أرقام التواصل عبر الواتساب">
   <span>تواصل معنا عبر الواتساب:</span>
   <a href="https://wa.me/966544298850" target="_blank" rel="noopener noreferrer">
-    <img src="images/whatsapp-color.svg" alt="واتساب" class="whatsapp-icon" /> 0544298850
+    <img src="images/whatsapp.svg" alt="واتساب" class="whatsapp-icon" /> 0544298850
   </a>
   <a href="https://wa.me/966504214480" target="_blank" rel="noopener noreferrer">
-    <img src="images/whatsapp-color.svg" alt="واتساب" class="whatsapp-icon" /> 0504214480
+    <img src="images/whatsapp.svg" alt="واتساب" class="whatsapp-icon" /> 0504214480
   </a>
   <a href="https://wa.me/966548420912" target="_blank" rel="noopener noreferrer">
-    <img src="images/whatsapp-color.svg" alt="واتساب" class="whatsapp-icon" /> 0548420912
+    <img src="images/whatsapp.svg" alt="واتساب" class="whatsapp-icon" /> 0548420912
   </a>
 </div>
 
@@ -193,24 +202,25 @@
 <footer>
   <div class="social-links" aria-label="روابط التواصل الاجتماعي">
     <a href="https://www.youtube.com/@KhalidRacingShop" target="_blank" rel="noopener noreferrer">
-      <img src="images/youtube-color.svg" alt="يوتيوب" /> يوتيوب
+      <img src="images/youtube.svg" alt="يوتيوب" /> يوتيوب
     </a>
     <a href="https://www.snapchat.com/add/khaledqadi2002?share_id=dhvVgBtkZps&locale=ar-SA" target="_blank" rel="noopener noreferrer">
-      <img src="images/snapchat-color.svg" alt="سناب شات" /> سناب شات
+      <img src="images/snapchat.svg" alt="سناب شات" /> سناب شات
     </a>
     <a href="https://x.com/KhalidRacing?t=Iv0he1gf6E7MR-_tBkChlQ&s=09" target="_blank" rel="noopener noreferrer">
-      <img src="images/twitter-color.svg" alt="تويتر" /> تويتر
+      <img src="images/twitter.svg" alt="تويتر" /> تويتر
     </a>
     <a href="https://www.instagram.com/kldss?igsh=MWJnbmUweXg4bnlocQ==" target="_blank" rel="noopener noreferrer">
-      <img src="images/instagram-color.svg" alt="إنستقرام" /> إنستقرام
+      <img src="images/instagram.svg" alt="إنستقرام" /> إنستقرام
     </a>
     <a href="https://haraj.com.sa/users/kld-dk" target="_blank" rel="noopener noreferrer">
-      <img src="images/haraj-color.svg" alt="حراج" /> موقع حراج
+      <img src="images/haraj.svg" alt="حراج" /> موقع حراج
     </a>
   </div>
 </footer>
 
 <script>
+  // بيانات البرندات (تأكد من وضع الشعارات في images/brands/)
   const brands = [
     { name: "MSD", logo: "images/brands/msd.png", link: "brands/msd.html" },
     { name: "EXCEED", logo: "images/brands/exceed.png", link: "brands/exceed.html" },
@@ -256,15 +266,17 @@
     { name: "LUkRepSet", logo: "images/brands/lukrepset.png", link: "brands/lukrepset.html" }
   ];
 
+  // بيانات القطع (كمثال)
   const parts = [
     { brand: "MSD", name: "فلتر هواء", partNumber: "MSD123" },
     { brand: "BTR", name: "بلف وقود", partNumber: "BTR456" },
     { brand: "aFe", name: "شمعات", partNumber: "AFE789" },
+    // أضف باقي القطع هنا حسب الحاجة
   ];
 
   function buildBrands(filteredBrands = brands) {
     const container = document.querySelector(".brands-container");
-    container.innerHTML = "";
+    container.innerHTML = ""; // تفريغ الحاوية
 
     filteredBrands.forEach(brand => {
       const brandLink = document.createElement("a");
@@ -287,6 +299,7 @@
     });
   }
 
+  // وظيفة بحث داخل القطع (تصفية حسب اسم أو رقم القطعة)
   function searchParts() {
     const input = document.getElementById("searchInput");
     input.addEventListener("input", () => {
@@ -297,6 +310,7 @@
         return;
       }
 
+      // فلترة القطع التي تطابق البحث
       const matchedBrandsNames = new Set();
 
       parts.forEach(part => {
@@ -308,11 +322,13 @@
         }
       });
 
+      // بناء قائمة البرندات بناءً على نتائج البحث
       const filteredBrands = brands.filter(brand => matchedBrandsNames.has(brand.name));
 
       if (filteredBrands.length > 0) {
         buildBrands(filteredBrands);
       } else {
+        // إذا ما في تطابق، فرغ الحاوية واظهر رسالة
         const container = document.querySelector(".brands-container");
         container.innerHTML = "<p style='text-align:center; color:#e74c3c; font-weight:600;'>لا توجد نتائج مطابقة</p>";
       }
