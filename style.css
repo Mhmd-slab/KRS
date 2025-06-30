@@ -1,0 +1,58 @@
+body {
+  font-family: Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+header {
+  background: #222;
+  color: white;
+  padding: 20px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.brand-box {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.brand-box:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transform: translateY(-4px);
+}
+
+.brand-box img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+footer {
+  background: #eee;
+  padding: 15px;
+  font-size: 14px;
+}
