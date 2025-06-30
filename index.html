@@ -3,28 +3,151 @@
 <head>
   <meta charset="UTF-8" />
   <title>متجر KRS لقطع التعديل والتزويد</title>
+
   <style>
-    body{font-family:Arial,sans-serif;background:#f8f8f8;margin:0;padding:20px;color:#333}
-    header{text-align:center;margin-bottom:25px}
-    header h1{margin:0 0 6px;font-size:30px;color:#222}
-    header p{margin:0;font-size:16px;color:#555}
-    /* حقل البحث */
-    #krs-query{width:250px;padding:7px 10px;border:1px solid #ccc;border-radius:6px;font-size:14px}
-    #krs-search-btn{padding:7px 16px;border:0;border-radius:6px;background:#0077cc;color:#fff;font-size:14px;cursor:pointer}
-    #krs-search-btn:hover{background:#005fa3}
-    /* أرقام واتساب */
-    .contact{text-align:center;font-size:15px;margin:24px 0;color:#444}
-    .contact a{color:#0077cc;text-decoration:none;margin:0 6px}
-    .contact a:hover{text-decoration:underline}
+    /* خطوط وألوان عامة */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f7fa;
+      margin: 0;
+      padding: 20px 15px;
+      color: #2c3e50;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    header h1 {
+      font-size: 32px;
+      margin-bottom: 6px;
+      color: #1a237e;
+      font-weight: 700;
+    }
+    header p {
+      font-size: 18px;
+      color: #3f51b5;
+      font-weight: 500;
+    }
+
+    /* بحث */
+    form {
+      margin-top: 20px;
+    }
+    #krs-query {
+      width: 280px;
+      padding: 9px 14px;
+      font-size: 16px;
+      border: 2px solid #3f51b5;
+      border-radius: 30px 0 0 30px;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+    #krs-query:focus {
+      border-color: #1a237e;
+    }
+    #krs-search-btn {
+      padding: 10px 24px;
+      font-size: 16px;
+      border: none;
+      background-color: #1a237e;
+      color: white;
+      border-radius: 0 30px 30px 0;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    #krs-search-btn:hover {
+      background-color: #3f51b5;
+    }
+
+    /* أرقام الواتساب مع شعار */
+    .contact {
+      text-align: center;
+      margin: 28px 0;
+      font-size: 16px;
+      color: #34495e;
+    }
+    .contact a {
+      color: #27ae60;
+      font-weight: 600;
+      text-decoration: none;
+      margin: 0 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 18px;
+    }
+    .contact a:hover {
+      text-decoration: underline;
+    }
+    .contact svg {
+      width: 20px;
+      height: 20px;
+      fill: #27ae60;
+    }
+
     /* شبكة البراندات */
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:18px;max-width:1100px;margin:0 auto 40px}
-    .box{background:#fff;border-radius:10px;padding:12px 6px;text-align:center;box-shadow:0 2px 6px rgba(0,0,0,.12);transition:.25s;text-decoration:none;color:#222}
-    .box:hover{transform:translateY(-6px);box-shadow:0 8px 16px rgba(0,0,0,.18)}
-    .box img{width:85px;height:85px;object-fit:contain;margin-bottom:8px}
-    .box span{display:block;font-size:14px;font-weight:600}
-    footer{text-align:center;font-size:14px;margin-top:40px;border-top:1px solid #ddd;padding-top:18px}
-    footer a{color:#0077cc;text-decoration:none;margin:0 8px}
-    footer a:hover{text-decoration:underline}
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(140px,1fr));
+      gap: 22px;
+      max-width: 1120px;
+      margin: 0 auto 50px auto;
+    }
+    .box {
+      background: white;
+      border-radius: 14px;
+      padding: 15px 8px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(63,81,181,0.15);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      text-decoration: none;
+      color: #1a237e;
+      font-weight: 600;
+      user-select: none;
+      cursor: pointer;
+    }
+    .box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 22px rgba(63,81,181,0.28);
+    }
+    .box img {
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+      margin-bottom: 10px;
+      filter: drop-shadow(0 0 1px rgba(0,0,0,0.15));
+    }
+    .box span {
+      font-size: 15px;
+      display: block;
+    }
+
+    /* تذييل */
+    footer {
+      text-align: center;
+      font-size: 15px;
+      color: #657786;
+      border-top: 1px solid #ccc;
+      padding: 25px 10px 20px 10px;
+    }
+    footer a {
+      color: #3f51b5;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 17px;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    footer svg {
+      width: 20px;
+      height: 20px;
+      fill: #3f51b5;
+    }
   </style>
 
   <!-- سكربت البحث -->
@@ -33,12 +156,12 @@
       e.preventDefault();
       const q = document.getElementById('krs-query').value.trim();
       if(!q) return;
-      /* غيّر النطاق إذا استعملت دومين مخصّص */
-      const site = 'site:mhmd-slab.github.io/KRS';
+      const site = 'site:mhmd-slab.github.io/KRS'; // عدّل حسب رابط موقعك
       const url  = 'https://www.google.com/search?q=' + encodeURIComponent(site + ' ' + q);
       window.open(url, '_blank');
     }
   </script>
+
 </head>
 
 <body>
@@ -47,75 +170,109 @@
   <h1>متجر KRS لقطع التعديل والتزويد</h1>
   <p>تعديل وتزويد المحركات الأمريكي</p>
 
-  <!-- مستطيل البحث -->
-  <form onsubmit="krsSearch(event)" style="margin-top:15px;">
-    <input id="krs-query" type="text" placeholder="ابحث باسم القطعة أو رقمها…" />
+  <!-- حقل البحث -->
+  <form onsubmit="krsSearch(event)" role="search" aria-label="بحث في المتجر">
+    <input id="krs-query" type="search" placeholder="ابحث باسم القطعة أو رقمها…" aria-label="ابحث باسم القطعة أو رقمها" autocomplete="off" />
     <button id="krs-search-btn" type="submit">بحث</button>
   </form>
 </header>
 
-<!-- أرقام واتساب مباشرة -->
-<div class="contact">
-  <strong>واتساب:</strong>
-  <a href="https://wa.me/966544298850" target="_blank">0544298850</a> /
-  <a href="https://wa.me/966504214480" target="_blank">0504214480</a> /
-  <a href="https://wa.me/966548420912" target="_blank">0548420912</a>
+<!-- أرقام الواتساب مع شعار -->
+<div class="contact" aria-label="أرقام التواصل واتساب">
+  <a href="https://wa.me/966544298850" target="_blank" rel="noopener noreferrer" aria-label="واتساب 0544298850">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.52 3.48A11.78 11.78 0 0012 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.98L0 24l6.17-1.59A11.91 11.91 0 0012 24c6.63 0 12-5.37 12-12a11.76 11.76 0 00-3.48-8.52zM12 22.17a10.18 10.18 0 01-5.16-1.44l-.37-.22-3.66.94.97-3.56-.23-.37A10.17 10.17 0 011.83 12 10.19 10.19 0 0112 1.83 10.19 10.19 0 0122.17 12 10.19 10.19 0 0112 22.17zm5.45-7.73c-.23-.11-1.34-.66-1.54-.73-.2-.08-.34-.12-.48.12-.14.23-.54.73-.66.88-.12.15-.24.17-.44.06a6.9 6.9 0 01-2.03-1.25 7.68 7.68 0 01-1.42-1.76c-.15-.26 0-.4.11-.51.11-.11.25-.3.37-.45.12-.15.16-.25.24-.42.08-.17.04-.31-.02-.43-.07-.11-.48-1.16-.66-1.6-.17-.43-.34-.37-.48-.38-.12-.01-.26-.01-.4-.01a1.38 1.38 0 00-1 .46c-.35.35-1.35 1.31-1.35 3.2s1.38 3.71 1.57 3.96c.19.24 2.7 4.17 6.55 5.85a6.6 6.6 0 002.95.5c.9 0 1.38-.36 1.58-.7.2-.34.2-.63.14-.7-.06-.07-.2-.11-.43-.2z"/></svg>
+    0544298850
+  </a>
+  /
+  <a href="https://wa.me/966504214480" target="_blank" rel="noopener noreferrer" aria-label="واتساب 0504214480">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.52 3.48A11.78 11.78 0 0012 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.98L0 24l6.17-1.59A11.91 11.91 0 0012 24c6.63 0 12-5.37 12-12a11.76 11.76 0 00-3.48-8.52zM12 22.17a10.18 10.18 0 01-5.16-1.44l-.37-.22-3.66.94.97-3.56-.23-.37A10.17 10.17 0 011.83 12 10.19 10.19 0 0112 1.83 10.19 10.19 0 0122.17 12 10.19 10.19 0 0112 22.17zm5.45-7.73c-.23-.11-1.34-.66-1.54-.73-.2-.08-.34-.12-.48.12-.14.23-.54.73-.66.88-.12.15-.24.17-.44.06a6.9 6.9 0 01-2.03-1.25 7.68 7.68 0 01-1.42-1.76c-.15-.26 0-.4.11-.51.11-.11.25-.3.37-.45.12-.15.16-.25.24-.42.08-.17.04-.31-.02-.43-.07-.11-.48-1.16-.66-1.6-.17-.43-.34-.37-.48-.38-.12-.01-.26-.01-.4-.01a1.38 1.38 0 00-1 .46c-.35.35-1.35 1.31-1.35 3.2s1.38 3.71 1.57 3.96c.19.24 2.7 4.17 6.55 5.85a6.6 6.6 0 002.95.5c.9 0 1.38-.36 1.58-.7.2-.34.2-.63.14-.7-.06-.07-.2-.11-.43-.2z"/></svg>
+    0504214480
+  </a>
+  /
+  <a href="https://wa.me/966548420912" target="_blank" rel="noopener noreferrer" aria-label="واتساب 0548420912">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.52 3.48A11.78 11.78 0 0012 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.98L0 24l6.17-1.59A11.91 11.91 0 0012 24c6.63 0 12-5.37 12-12a11.76 11.76 0 00-3.48-8.52zM12 22.17a10.18 10.18 0 01-5.16-1.44l-.37-.22-3.66.94.97-3.56-.23-.37A10.17 10.17 0 011.83 12 10.19 10.19 0 0112 1.83 10.19 10.19 0 0122.17 12 10.19 10.19 0 0112 22.17zm5.45-7.73c-.23-.11-1.34-.66-1.54-.73-.2-.08-.34-.12-.48.12-.14.23-.54.73-.66.88-.12.15-.24.17-.44.06a6.9 6.9 0 01-2.03-1.25 7.68 7.68 0 01-1.42-1.76c-.15-.26 0-.4.11-.51.11-.11.25-.3.37-.45.12-.15.16-.25.24-.42.08-.17.04-.31-.02-.43-.07-.11-.48-1.16-.66-1.6-.17-.43-.34-.37-.48-.38-.12-.01-.26-.01-.4-.01a1.38 1.38 0 00-1 .46c-.35.35-1.35 1.31-1.35 3.2s1.38 3.71 1.57 3.96c.19.24 2.7 4.17 6.55 5.85a6.6 6.6 0 002.95.5c.9 0 1.38-.36 1.58-.7.2-.34.2-.63.14-.7-.06-.07-.2-.11-.43-.2z"/></svg>
+    0548420912
+  </a>
 </div>
 
 <!-- شبكة البراندات -->
-<div class="grid">
-  <!-- انسخ السطرين الآتيين لكل براند وعدِّل المسارات عند الحاجة -->
-  <a class="box" href="brands/msd.html"><img src="images/msd/logo.png" alt="MSD"><span>MSD</span></a>
-  <a class="box" href="brands/exceed.html"><img src="images/exceed/logo.png" alt="EXCEED"><span>EXCEED</span></a>
-  <a class="box" href="brands/btr.html"><img src="images/btr/logo.png" alt="BTR"><span>BTR</span></a>
-  <a class="box" href="brands/texasspeed.html"><img src="images/texasspeed/logo.png" alt="TEXAS SPEED"><span>TEXAS SPEED</span></a>
-  <a class="box" href="brands/afe.html"><img src="images/afe/logo.png" alt="aFe"><span>aFe</span></a>
-  <a class="box" href="brands/vcm.html"><img src="images/vcm/logo.png" alt="VCM"><span>VCM</span></a>
-  <a class="box" href="brands/lucas.html"><img src="images/lucas/logo.png" alt="LUCAS"><span>LUCAS</span></a>
-  <a class="box" href="brands/epman.html"><img src="images/epman/logo.png" alt="EPMAN"><span>EPMAN</span></a>
-  <a class="box" href="brands/arp.html"><img src="images/arp/logo.png" alt="ARP"><span>ARP</span></a>
-  <a class="box" href="brands/aem.html"><img src="images/aem/logo.png" alt="AEM"><span>AEM</span></a>
-  <a class="box" href="brands/mahle.html"><img src="images/mahle/logo.png" alt="MAHLE"><span>MAHLE</span></a>
-  <a class="box" href="brands/acdelco.html"><img src="images/acdelco/logo.png" alt="ACDELCO"><span>ACDELCO</span></a>
-  <a class="box" href="brands/ngk.html"><img src="images/ngk/logo.png" alt="NGK"><span>NGK</span></a>
-  <a class="box" href="brands/lingenfelter.html"><img src="images/lingenfelter/logo.png" alt="LINGENFELTER"><span>LINGENFELTER</span></a>
-  <a class="box" href="brands/gm.html"><img src="images/gm/logo.png" alt="GM"><span>GM</span></a>
-  <a class="box" href="brands/rollmaster.html"><img src="images/rollmaster/logo.png" alt="ROLLMASTER"><span>ROLLMASTER</span></a>
-  <a class="box" href="brands/vp.html"><img src="images/vp/logo.png" alt="VP"><span>VP</span></a>
-  <a class="box" href="brands/bosch.html"><img src="images/bosch/logo.png" alt="BOSCH"><span>BOSCH</span></a>
-  <a class="box" href="brands/spectre.html"><img src="images/spectre/logo.png" alt="SPECTRE"><span>SPECTRE</span></a>
-  <a class="box" href="brands/boost.html"><img src="images/boost/logo.png" alt="BOOST"><span>BOOST</span></a>
-  <a class="box" href="brands/superpro.html"><img src="images/superpro/logo.png" alt="Super Pro"><span>Super Pro</span></a>
-  <a class="box" href="brands/pac.html"><img src="images/pac/logo.png" alt="PAC"><span>PAC</span></a>
-  <a class="box" href="brands/dicom.html"><img src="images/dicom/logo.png" alt="Dicom"><span>Dicom</span></a>
-  <a class="box" href="brands/power.html"><img src="images/power/logo.png" alt="POWER"><span>POWER</span></a>
-  <a class="box" href="brands/tiautomotive.html"><img src="images/tiautomotive/logo.png" alt="TI Automotive"><span>TI Automotive</span></a>
-  <a class="box" href="brands/melling.html"><img src="images/melling/logo.png" alt="MELLING"><span>MELLING</span></a>
-  <a class="box" href="brands/aeromotive.html"><img src="images/aeromotive/logo.png" alt="AEROMOTIVE"><span>AEROMOTIVE</span></a>
-  <a class="box" href="brands/fte.html"><img src="images/fte/logo.png" alt="FTE"><span>FTE</span></a>
-  <a class="box" href="brands/kn.html"><img src="images/kn/logo.png" alt="K&N"><span>K&amp;N</span></a>
-  <a class="box" href="brands/lufii.html"><img src="images/lufii/logo.png" alt="Lufii"><span>Lufii</span></a>
-  <a class="box" href="brands/snow.html"><img src="images/snow/logo.png" alt="SNOW"><span>SNOW</span></a>
-  <a class="box" href="brands/mcleod.html"><img src="images/mcleod/logo.png" alt="McLeod"><span>McLeod</span></a>
-  <a class="box" href="brands/tcl.html"><img src="images/tcl/logo.png" alt="TCL"><span>TCL</span></a>
-  <a class="box" href="brands/drc.html"><img src="images/drc/logo.png" alt="DRC"><span>DRC</span></a>
-  <a class="box" href="brands/bilstein.html"><img src="images/bilstein/logo.png" alt="BILSTEIN"><span>BILSTEIN</span></a>
-  <a class="box" href="brands/cometic.html"><img src="images/cometic/logo.png" alt="COMETIC"><span>COMETIC</span></a>
-  <a class="box" href="brands/hptuners.html"><img src="images/hptuners/logo.png" alt="Hptuners"><span>Hptuners</span></a>
-  <a class="box" href="brands/kingsprings.html"><img src="images/kingsprings/logo.png" alt="King Springs"><span>King Springs</span></a>
-  <a class="box" href="brands/vogtland.html"><img src="images/vogtland/logo.png" alt="VOGTLAND"><span>VOGTLAND</span></a>
-  <a class="box" href="brands/sctx4.html"><img src="images/sctx4/logo.png" alt="SCT X4"><span>SCT X4</span></a>
-  <a class="box" href="brands/mopar.html"><img src="images/mopar/logo.png" alt="MOPAR"><span>MOPAR</span></a>
-  <a class="box" href="brands/lukrepset.html"><img src="images/lukrepset/logo.png" alt="LUkRepSet"><span>LUkRepSet</span></a>
+<div class="grid" aria-label="قائمة البرندات">
+  <a class="box" href="brands/msd.html"><img src="images/msd/logo.png" alt="شعار MSD"><span>MSD</span></a>
+  <a class="box" href="brands/exceed.html"><img src="images/exceed/logo.png" alt="شعار EXCEED"><span>EXCEED</span></a>
+  <a class="box" href="brands/btr.html"><img src="images/btr/logo.png" alt="شعار BTR"><span>BTR</span></a>
+  <a class="box" href="brands/texasspeed.html"><img src="images/texasspeed/logo.png" alt="شعار TEXAS SPEED"><span>TEXAS SPEED</span></a>
+  <a class="box" href="brands/afe.html"><img src="images/afe/logo.png" alt="شعار aFe"><span>aFe</span></a>
+  <a class="box" href="brands/vcm.html"><img src="images/vcm/logo.png" alt="شعار VCM"><span>VCM</span></a>
+  <a class="box" href="brands/lucas.html"><img src="images/lucas/logo.png" alt="شعار LUCAS"><span>LUCAS زيوت</span></a>
+  <a class="box" href="brands/epman.html"><img src="images/epman/logo.png" alt="شعار EPMAN"><span>EPMAN اقفال كبوت</span></a>
+  <a class="box" href="brands/arp.html"><img src="images/arp/logo.png" alt="شعار ARP"><span>ARP</span></a>
+  <a class="box" href="brands/aem.html"><img src="images/aem/logo.png" alt="شعار AEM"><span>AEM</span></a>
+  <a class="box" href="brands/mahle.html"><img src="images/mahle/logo.png" alt="شعار MAHLE"><span>MAHLE</span></a>
+  <a class="box" href="brands/acdelco.html"><img src="images/acdelco/logo.png" alt="شعار ACDELCO"><span>ACDELCO</span></a>
+  <a class="box" href="brands/ngk.html"><img src="images/ngk/logo.png" alt="شعار NGK"><span>NGK</span></a>
+  <a class="box" href="brands/lingenfelter.html"><img src="images/lingenfelter/logo.png" alt="شعار LINGENFELTER"><span>LINGENFELTER</span></a>
+  <a class="box" href="brands/gm.html"><img src="images/gm/logo.png" alt="شعار GM"><span>GM</span></a>
+  <a class="box" href="brands/rollmaster.html"><img src="images/rollmaster/logo.png" alt="شعار ROLLMASTER"><span>ROLLMASTER</span></a>
+  <a class="box" href="brands/vp.html"><img src="images/vp/logo.png" alt="شعار VP"><span>VP</span></a>
+  <a class="box" href="brands/bosch.html"><img src="images/bosch/logo.png" alt="شعار BOSCH"><span>BOSCH</span></a>
+  <a class="box" href="brands/spectre.html"><img src="images/spectre/logo.png" alt="شعار SPECTRE"><span>SPECTRE</span></a>
+  <a class="box" href="brands/boost.html"><img src="images/boost/logo.png" alt="شعار BOOST"><span>BOOST</span></a>
+  <a class="box" href="brands/superpro.html"><img src="images/superpro/logo.png" alt="شعار Super Pro"><span>Super Pro</span></a>
+  <a class="box" href="brands/pac.html"><img src="images/pac/logo.png" alt="شعار PAC"><span>PAC</span></a>
+  <a class="box" href="brands/dicom.html"><img src="images/dicom/logo.png" alt="شعار Dicom"><span>Dicom</span></a>
+  <a class="box" href="brands/power.html"><img src="images/power/logo.png" alt="شعار POWER"><span>POWER</span></a>
+  <a class="box" href="brands/tiautomotive.html"><img src="images/tiautomotive/logo.png" alt="شعار TI Automotive"><span>TI Automotive</span></a>
+  <a class="box" href="brands/melling.html"><img src="images/melling/logo.png" alt="شعار MELLING"><span>MELLING</span></a>
+  <a class="box" href="brands/aeromotive.html"><img src="images/aeromotive/logo.png" alt="شعار AEROMOTIVE"><span>AEROMOTIVE</span></a>
+  <a class="box" href="brands/fte.html"><img src="images/fte/logo.png" alt="شعار FTE"><span>FTE</span></a>
+  <a class="box" href="brands/kn.html"><img src="images/kn/logo.png" alt="شعار K&N"><span>K&amp;N</span></a>
+  <a class="box" href="brands/lufii.html"><img src="images/lufii/logo.png" alt="شعار Lufii"><span>Lufii</span></a>
+  <a class="box" href="brands/snow.html"><img src="images/snow/logo.png" alt="شعار SNOW"><span>SNOW</span></a>
+  <a class="box" href="brands/mcleod.html"><img src="images/mcleod/logo.png" alt="شعار McLeod"><span>McLeod</span></a>
+  <a class="box" href="brands/tcl.html"><img src="images/tcl/logo.png" alt="شعار TCL"><span>TCL</span></a>
+  <a class="box" href="brands/drc.html"><img src="images/drc/logo.png" alt="شعار DRC"><span>DRC</span></a>
+  <a class="box" href="brands/bilstein.html"><img src="images/bilstein/logo.png" alt="شعار BILSTEIN"><span>BILSTEIN</span></a>
+  <a class="box" href="brands/cometic.html"><img src="images/cometic/logo.png" alt="شعار COMETIC"><span>COMETIC</span></a>
+  <a class="box" href="brands/hptuners.html"><img src="images/hptuners/logo.png" alt="شعار Hptuners"><span>Hptuners</span></a>
+  <a class="box" href="brands/kingsprings.html"><img src="images/kingsprings/logo.png" alt="شعار King Springs"><span>King Springs</span></a>
+  <a class="box" href="brands/vogtland.html"><img src="images/vogtland/logo.png" alt="شعار VOGTLAND"><span>VOGTLAND</span></a>
+  <a class="box" href="brands/sctx4.html"><img src="images/sctx4/logo.png" alt="شعار SCT X4"><span>SCT X4</span></a>
+  <a class="box" href="brands/mopar.html"><img src="images/mopar/logo.png" alt="شعار MOPAR"><span>MOPAR</span></a>
+  <a class="box" href="brands/lukrepset.html"><img src="images/lukrepset/logo.png" alt="شعار LUkRepSet"><span>LUkRepSet</span></a>
 </div>
 
-<footer>
-  تواصل معنا:
-  <a href="https://www.youtube.com/@KhalidRacingShop" target="_blank">يوتيوب</a> |
-  <a href="https://www.snapchat.com/add/khaledqadi2002?share_id=dhvVgBtkZps&locale=ar-SA" target="_blank">سناب شات</a> |
-  <a href="https://x.com/KhalidRacing" target="_blank">تويتر</a> |
-  <a href="https://www.instagram.com/kldss" target="_blank">إنستقرام</a> |
-  <a href="https://haraj.com.sa/users/kld-dk" target="_blank">حراج</a>
+<footer aria-label="روابط التواصل الاجتماعي">
+  <a href="https://www.youtube.com/@KhalidRacingShop" target="_blank" rel="noopener noreferrer" aria-label="قناة يوتيوب">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.95C18.88 4 12 4 12 4s-6.88 0-8.59.47a2.78 2.78 0 00-1.95 1.95A29 29 0 001 12a29 29 0 00.47 5.58 2.78 2.78 0 001.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"></path>
+      <path d="M9.75 15.02V8.98l5.5 3.02-5.5 3.02z"></path>
+    </svg>
+    يوتيوب
+  </a>
+  <a href="https://www.snapchat.com/add/khaledqadi2002?share_id=dhvVgBtkZps&locale=ar-SA" target="_blank" rel="noopener noreferrer" aria-label="سناب شات">
+    <svg viewBox="0 0 24 24" fill="currentColor" >
+      <path d="M12 0C9.94 0 8.02 1.34 8.02 1.34 7.1 1.85 6.34 3.3 6.34 3.3 5.13 5.87 6.02 7.96 6.02 7.96 6.02 10.38 7.96 12 7.96 12S6.02 13.62 6.02 16.04c0 0-0.89 2.08 1.07 4.15 0 0 .7 1.15 3.05 1.15s3.05-1.15 3.05-1.15c1.96-2.07 1.07-4.15 1.07-4.15 0-2.42-1.94-4.04-1.94-4.04S17.98 10.38 17.98 7.96c0 0 .89-2.09-1.06-4.15 0 0-.77-1.38-3.03-1.38zM12 13.39c-1.03 0-1.87-0.84-1.87-1.87s0.84-1.87 1.87-1.87 1.87 0.84 1.87 1.87-0.84 1.87-1.87 1.87z"/>
+    </svg>
+    سناب شات
+  </a>
+  <a href="https://x.com/KhalidRacing" target="_blank" rel="noopener noreferrer" aria-label="تويتر">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M23 3a10.9 10.9 0 01-3.14.86A4.48 4.48 0 0022.4 1.7a9 9 0 01-2.88 1.1A4.52 4.52 0 0016.1 0c-2.49 0-4.5 2.05-4.5 4.58 0 .36.04.7.12 1.03C7.69 5.44 4.07 3.29 1.64 0a4.52 4.52 0 00-.6 2.3 4.53 4.53 0 002 3.75 4.49 4.49 0 01-2.05-.56v.06a4.5 4.5 0 003.61 4.42c-.6.15-1.23.23-1.89.23a5.11 5.11 0 01-.85-.07 4.49 4.49 0 004.19 3.1A9 9 0 010 19.54 12.77 12.77 0 006.92 21c8.3 0 12.85-7.1 12.85-13.24 0-.2 0-.39-.01-.58A9.46 9.46 0 0023 3z"/>
+    </svg>
+    تويتر
+  </a>
+  <a href="https://www.instagram.com/kldss" target="_blank" rel="noopener noreferrer" aria-label="إنستقرام">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 2A3.75 3.75 0 004 7.75v8.5A3.75 3.75 0 007.75 20h8.5A3.75 3.75 0 0020 16.25v-8.5A3.75 3.75 0 0016.25 4h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5zm4.75-2.75a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z"/>
+    </svg>
+    إنستقرام
+  </a>
+  <a href="https://haraj.com.sa/users/kld-dk" target="_blank" rel="noopener noreferrer" aria-label="موقع حراج">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M3 4h18v2H3V4zm0 12h18v2H3v-2zm0-6h18v2H3v-2z"/>
+    </svg>
+    حراج
+  </a>
 </footer>
 
 </body>
