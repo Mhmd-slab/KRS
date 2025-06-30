@@ -2,54 +2,149 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>متجر KRS لقطع التعديل والتزويد</title>
-  <link rel="stylesheet" href="style.css" />
   <style>
-    body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 0; }
-    header { text-align: center; padding: 20px; background: #222; color: white; }
-    header img { max-width: 150px; }
-    .brands-grid { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; padding: 20px; }
-    .brand-box { background: white; border-radius: 8px; width: 120px; text-align: center; padding: 10px; box-shadow: 0 0 8px #ccc; text-decoration: none; color: #333; }
-    .brand-box img { max-width: 80px; margin-bottom: 8px; }
-    .brand-box span { display: block; font-weight: bold; }
-    footer { text-align: center; padding: 15px; background: #222; color: white; font-size: 14px; }
-    footer a { color: #9fceff; text-decoration: none; margin: 0 5px; }
-    footer a:hover { text-decoration: underline; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+      color: #333333;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    header h1 {
+      margin: 0 0 8px 0;
+      font-size: 30px;
+      color: #222222;
+    }
+    header p.description {
+      margin: 0;
+      font-size: 18px;
+      color: #555555;
+      font-weight: normal;
+    }
+    .contact {
+      text-align: center;
+      font-size: 16px;
+      margin-bottom: 30px;
+      color: #444444;
+    }
+    .brands-list {
+      max-width: 600px;
+      margin: 0 auto 40px auto;
+      background-color: #ffffff;
+      border-radius: 8px;
+      padding: 20px 30px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      line-height: 1.7;
+      font-size: 16px;
+      color: #222222;
+    }
+    .brands-list h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #0077cc;
+      font-weight: 600;
+    }
+    .brands-list ol {
+      padding-left: 20px;
+      margin: 0;
+    }
+    .brands-list li {
+      margin-bottom: 8px;
+    }
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #666666;
+      border-top: 1px solid #dddddd;
+      padding-top: 20px;
+      direction: rtl;
+      font-weight: normal;
+    }
+    footer a {
+      color: #0077cc;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: normal;
+    }
+    footer a:hover,
+    footer a:focus {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <img src="images/logo-krs.png" alt="شعار متجر KRS" />
   <h1>متجر KRS لقطع التعديل والتزويد</h1>
-  <p>تعديل وتزويد المحركات الأمريكية – نوفر أكثر من 40 ماركة عالمية</p>
+  <p class="description">تعديل وتزويد المحركات الأمريكي</p>
 </header>
 
-<main>
-  <div class="brands-grid">
-    <a class="brand-box" href="brands/msd.html">
-      <img src="images/msd.png" alt="MSD" />
-      <span>MSD</span>
-    </a>
-    <a class="brand-box" href="brands/exceed.html">
-      <img src="images/coming-soon.png" alt="EXCEED" />
-      <span>EXCEED</span>
-    </a>
-    <a class="brand-box" href="brands/btr.html">
-      <img src="images/coming-soon.png" alt="BTR" />
-      <span>BTR</span>
-    </a>
-    <!-- أضف باقي الماركات بنفس الطريقة -->
-  </div>
-</main>
+<div class="contact">
+  <p><strong>أرقام التواصل:</strong> 0544298850 / 0504214480 / 0548420912</p>
+</div>
+
+<section class="brands-list" aria-label="قائمة البرندات والشركات المصنعة للقطع">
+  <h2>قائمة البرندات والشركات المصنعة للقطع</h2>
+  <ol>
+    <li>MSD</li>
+    <li>EXCEED</li>
+    <li>BTR</li>
+    <li>TEXAS SPEED</li>
+    <li>aFe</li>
+    <li>VCM</li>
+    <li>LUCAS زيوت</li>
+    <li>EPMAN اقفال كبوت</li>
+    <li>ARP</li>
+    <li>AEM</li>
+    <li>MAHLE</li>
+    <li>ACDELCO</li>
+    <li>NGK</li>
+    <li>LINGENFELTER</li>
+    <li>GM</li>
+    <li>ROLLMASTER</li>
+    <li>VP</li>
+    <li>BOSCH</li>
+    <li>SPECTRE</li>
+    <li>BOOST</li>
+    <li>Super Pro</li>
+    <li>PAC</li>
+    <li>Dicom</li>
+    <li>POWER</li>
+    <li>TI Automotive</li>
+    <li>MELLING</li>
+    <li>AEROMOTIVE</li>
+    <li>FTE</li>
+    <li>K&amp;N</li>
+    <li>Lufii</li>
+    <li>SNOW</li>
+    <li>McLeod</li>
+    <li>TCL</li>
+    <li>DRC</li>
+    <li>BILSTEIN</li>
+    <li>COMETIC</li>
+    <li>Hptuners</li>
+    <li>King Springs</li>
+    <li>VOGTLAND</li>
+    <li>SCT X4</li>
+    <li>MOPAR</li>
+    <li>LUkRepSet</li>
+  </ol>
+</section>
 
 <footer>
-  <p>للتواصل: 0544298850 / 0504214480 / 0548420912</p>
+  <p>تواصل معنا عبر منصات التواصل الاجتماعي:</p>
   <p>
-    سناب: <a href="https://www.snapchat.com/add/khaledqadi2002" target="_blank" rel="noopener noreferrer">khaledqadi2002</a> |
-    إنستقرام: <a href="https://www.instagram.com/kldss" target="_blank" rel="noopener noreferrer">kldss</a> |
-    واتساب: <a href="https://wa.me/966544298850" target="_blank" rel="noopener noreferrer">0544298850</a>
+    <a href="https://www.youtube.com/@KhalidRacingShop" target="_blank" rel="noopener noreferrer">يوتيوب</a> |
+    <a href="https://www.snapchat.com/add/khaledqadi2002?share_id=dhvVgBtkZps&locale=ar-SA" target="_blank" rel="noopener noreferrer">سناب شات</a> |
+    <a href="https://x.com/KhalidRacing?t=Iv0he1gf6E7MR-_tBkChlQ&s=09" target="_blank" rel="noopener noreferrer">تويتر</a> |
+    <a href="https://www.instagram.com/kldss?igsh=MWJnbmUweXg4bnlocQ==" target="_blank" rel="noopener noreferrer">إنستقرام</a> |
+    <a href="https://haraj.com.sa/users/kld-dk" target="_blank" rel="noopener noreferrer">موقع حراج</a>
   </p>
 </footer>
 
