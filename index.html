@@ -1,344 +1,360 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>متجر KRS لقطع التعديل والتزويد</title>
-<style>
-  /* Reset بسيط */
-  * {
-    box-sizing: border-box;
-  }
-
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f5f7fa;
-    color: #2c3e50;
-    margin: 0;
-    padding: 0 15px 40px;
-    min-height: 100vh;
-  }
-
-  header {
-    text-align: center;
-    padding: 30px 10px 10px;
-  }
-
-  header h1 {
-    margin: 0;
-    font-size: 2.4rem;
-    color: #34495e;
-  }
-
-  header p.description {
-    font-size: 1.1rem;
-    color: #7f8c8d;
-    margin-top: 5px;
-    font-weight: 400;
-  }
-
-  /* بحث */
-  .search-container {
-    max-width: 480px;
-    margin: 20px auto 35px;
-    text-align: center;
-  }
-
-  .search-container input[type="search"] {
-    width: 100%;
-    padding: 12px 18px;
-    font-size: 1rem;
-    border: 2px solid #bdc3c7;
-    border-radius: 30px;
-    outline: none;
-    transition: border-color 0.3s ease;
-  }
-
-  .search-container input[type="search"]:focus {
-    border-color: #2980b9;
-    box-shadow: 0 0 6px rgba(41, 128, 185, 0.4);
-  }
-
-  /* الحاوية الرئيسية للبراندات */
-  .brands-container {
-    max-width: 1100px;
-    margin: 0 auto 40px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
-    gap: 22px;
-  }
-
-  /* مربع كل براند */
-  .brand-box {
-    background: #fff;
-    border-radius: 12px;
-    padding: 18px 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    text-decoration: none;
-    color: #34495e;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .brand-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(41, 128, 185, 0.3);
-  }
-
-  .brand-logo {
-    max-width: 90px;
-    max-height: 90px;
-    object-fit: contain;
-    margin-bottom: 12px;
-  }
-
-  .brand-name {
-    font-weight: 600;
-    font-size: 1rem;
-  }
-
-  /* التواصل الاجتماعي */
-  footer {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding-top: 25px;
-    border-top: 1px solid #dfe6e9;
-    text-align: center;
-    color: #636e72;
-    font-size: 0.9rem;
-  }
-
-  .social-links {
-    margin-bottom: 15px;
-  }
-
-  .social-links a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #34495e;
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-  }
-
-  .social-links a:hover {
-    color: #2980b9;
-  }
-
-  .social-links img {
-    width: 22px;
-    height: 22px;
-  }
-
-  /* أرقام التواصل */
-  .contact-info {
-    margin-bottom: 25px;
-    font-size: 1.1rem;
-  }
-
-  .contact-info a {
-    color: #27ae60;
-    font-weight: 600;
-    text-decoration: none;
-    margin: 0 8px;
-  }
-
-  .contact-info a:hover {
-    text-decoration: underline;
-  }
-
-  .whatsapp-icon {
-    vertical-align: middle;
-    width: 22px;
-    height: 22px;
-    margin-left: 6px;
-  }
-
-  /* Responsive */
-  @media (max-width: 480px) {
+  <meta charset="UTF-8" />
+  <title>متجر KRS لقطع التعديل والتزويد</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f3f6f9;
+      margin: 0;
+      padding: 20px;
+      color: #222;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .store-logo {
+      max-width: 180px;
+      height: auto;
+      margin: 0 auto 10px auto;
+      display: block;
+    }
     header h1 {
-      font-size: 1.8rem;
+      margin: 0;
+      font-size: 28px;
+      color: #005ea7;
+      font-weight: 700;
+    }
+    header p.description {
+      margin: 6px 0 0 0;
+      font-size: 18px;
+      color: #444;
+    }
+
+    /* بحث */
+    #searchBox {
+      width: 100%;
+      max-width: 450px;
+      padding: 10px 15px;
+      font-size: 16px;
+      border: 2px solid #0077cc;
+      border-radius: 6px;
+      margin: 25px auto 40px auto;
+      display: block;
+      box-sizing: border-box;
+      outline-offset: 2px;
+    }
+
+    /* قائمة البراندات كمربعات */
+    .brands-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto 50px auto;
+    }
+    .brand-box {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
+      cursor: pointer;
+      padding: 15px 10px;
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      user-select: none;
+    }
+    .brand-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 7px 15px rgb(0 0 0 / 0.15);
     }
     .brand-logo {
-      max-width: 70px;
-      max-height: 70px;
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 10px;
+      filter: drop-shadow(0 1px 1px rgb(0 0 0 / 0.1));
     }
-  }
-</style>
+    .brand-name {
+      font-weight: 600;
+      color: #0077cc;
+      font-size: 17px;
+      word-break: break-word;
+    }
+
+    /* نتائج البحث */
+    .results {
+      max-width: 600px;
+      margin: 0 auto 50px auto;
+      background: white;
+      border-radius: 8px;
+      padding: 15px 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .result-item {
+      border-bottom: 1px solid #eee;
+      padding: 12px 0;
+    }
+    .result-item:last-child {
+      border-bottom: none;
+    }
+    .result-name {
+      font-weight: bold;
+      font-size: 18px;
+      color: #0077cc;
+    }
+    .result-code {
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* الفوتر */
+    footer {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      border-top: 1px solid #ddd;
+      padding-top: 20px;
+      user-select: none;
+    }
+    footer .social-links {
+      margin-bottom: 15px;
+    }
+    footer .social-links a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s ease;
+    }
+    footer .social-links a:hover {
+      color: #004f87;
+    }
+    footer .social-links svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
+    /* أرقام التواصل مع أيقونة واتساب */
+    .contact-numbers {
+      margin-top: 10px;
+      font-weight: 600;
+      color: #222;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      user-select: text;
+    }
+    .contact-numbers a {
+      text-decoration: none;
+      color: #25d366; /* لون واتساب أخضر */
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid #25d366;
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: background-color 0.2s ease;
+    }
+    .contact-numbers a:hover {
+      background-color: #25d366;
+      color: white;
+    }
+    .contact-numbers svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+  </style>
 </head>
 <body>
 
 <header>
+  <img src="images/logo.png" alt="شعار متجر KRS" class="store-logo" />
   <h1>متجر KRS لقطع التعديل والتزويد</h1>
   <p class="description">تعديل وتزويد المحركات الأمريكي</p>
 </header>
 
-<div class="search-container">
-  <input type="search" id="searchInput" placeholder="ابحث باسم القطعة أو رقم القطعة..." aria-label="بحث في القطع" />
-</div>
+<input type="search" id="searchBox" placeholder="ابحث باسم القطعة أو رقمها..." oninput="searchParts()" aria-label="بحث عن القطع" />
 
-<div class="contact-info" aria-label="أرقام التواصل عبر الواتساب">
-  <span>تواصل معنا عبر الواتساب:</span>
-  <a href="https://wa.me/966544298850" target="_blank" rel="noopener noreferrer">
-    <img src="images/whatsapp.svg" alt="واتساب" class="whatsapp-icon" /> 0544298850
-  </a>
-  <a href="https://wa.me/966504214480" target="_blank" rel="noopener noreferrer">
-    <img src="images/whatsapp.svg" alt="واتساب" class="whatsapp-icon" /> 0504214480
-  </a>
-  <a href="https://wa.me/966548420912" target="_blank" rel="noopener noreferrer">
-    <img src="images/whatsapp.svg" alt="واتساب" class="whatsapp-icon" /> 0548420912
-  </a>
-</div>
+<section class="results" id="resultsContainer">
+  <p style="text-align:center; color:#777;">ابدأ بالكتابة للبحث عن القطع...</p>
+</section>
 
-<section class="brands-container" aria-label="البرندات">
-  <!-- مربعات البراندات تظهر هنا بالسكريبت -->
+<section class="brands-container" aria-label="قائمة البرندات والشركات المصنعة للقطع">
+  <!-- مربعات البراندات -->
 </section>
 
 <footer>
-  <div class="social-links" aria-label="روابط التواصل الاجتماعي">
-    <a href="https://www.youtube.com/@KhalidRacingShop" target="_blank" rel="noopener noreferrer">
-      <img src="images/youtube.svg" alt="يوتيوب" /> يوتيوب
+  <div class="social-links" aria-label="روابط حسابات التواصل الاجتماعي">
+    <a href="https://www.youtube.com/@KhalidRacingShop" target="_blank" rel="noopener noreferrer" aria-label="يوتيوب">
+      <svg viewBox="0 0 24 24"><path d="M10 15l5.19-3L10 9v6zM21.8 7.13c-.22-1.6-1.57-2.86-3.18-3.08C15.74 3.69 12 3.69 12 3.69s-3.74 0-6.62.36c-1.6.22-2.95 1.48-3.18 3.08-.22 1.6-.22 4.95-.22 4.95s0 3.34.22 4.95c.22 1.6 1.57 2.86 3.18 3.08 2.88.36 6.62.36 6.62.36s3.74 0 6.62-.36c1.6-.22 2.95-1.48 3.18-3.08.22-1.6.22-4.95.22-4.95s0-3.34-.22-4.95z"/></svg>
+      يوتيوب
     </a>
-    <a href="https://www.snapchat.com/add/khaledqadi2002?share_id=dhvVgBtkZps&locale=ar-SA" target="_blank" rel="noopener noreferrer">
-      <img src="images/snapchat.svg" alt="سناب شات" /> سناب شات
+    <a href="https://www.snapchat.com/add/khaledqadi2002?share_id=dhvVgBtkZps&locale=ar-SA" target="_blank" rel="noopener noreferrer" aria-label="سناب شات">
+      <svg viewBox="0 0 24 24"><path d="M12 2c-2.76 0-5 2.24-5 5v1c0 1.65-1.05 2.99-2.5 3.42v1.18c0 1.66 1.34 3 3 3h7c1.66 0 3-1.34 3-3v-1.18c-1.45-.43-2.5-1.77-2.5-3.42V7c0-2.76-2.24-5-5-5z"/></svg>
+      سناب شات
     </a>
-    <a href="https://x.com/KhalidRacing?t=Iv0he1gf6E7MR-_tBkChlQ&s=09" target="_blank" rel="noopener noreferrer">
-      <img src="images/twitter.svg" alt="تويتر" /> تويتر
+    <a href="https://x.com/KhalidRacing?t=Iv0he1gf6E7MR-_tBkChlQ&s=09" target="_blank" rel="noopener noreferrer" aria-label="تويتر">
+      <svg viewBox="0 0 24 24"><path d="M22 5.82a8.19 8.19 0 01-2.36.64 4.14 4.14 0 001.8-2.28 8.27 8.27 0 01-2.62 1 4.12 4.12 0 00-7 3.75 11.68 11.68 0 01-8.48-4.3 4.13 4.13 0 001.28 5.52 4.1 4.1 0 01-1.86-.51v.05a4.13 4.13 0 003.3 4 4.1 4.1 0 01-1.85.07 4.13 4.13 0 003.85 2.87 8.26 8.26 0 01-5.1 1.76A8.35 8.35 0 012 19.54a11.66 11.66 0 006.29 1.84c7.54 0 11.67-6.25 11.67-11.67 0-.18-.01-.35-.02-.52A8.18 8.18 0 0022 5.82z"/></svg>
+      تويتر
     </a>
-    <a href="https://www.instagram.com/kldss?igsh=MWJnbmUweXg4bnlocQ==" target="_blank" rel="noopener noreferrer">
-      <img src="images/instagram.svg" alt="إنستقرام" /> إنستقرام
+    <a href="https://www.instagram.com/kldss?igsh=MWJnbmUweXg4bnlocQ==" target="_blank" rel="noopener noreferrer" aria-label="إنستقرام">
+      <svg viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 2A3.75 3.75 0 004 7.75v8.5A3.75 3.75 0 007.75 20h8.5A3.75 3.75 0 0020 16.25v-8.5A3.75 3.75 0 0016.25 4h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5zm4.75-2.75a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z"/></svg>
+      إنستقرام
     </a>
-    <a href="https://haraj.com.sa/users/kld-dk" target="_blank" rel="noopener noreferrer">
-      <img src="images/haraj.svg" alt="حراج" /> موقع حراج
+    <a href="https://haraj.com.sa/users/kld-dk" target="_blank" rel="noopener noreferrer" aria-label="موقع حراج">
+      <svg viewBox="0 0 24 24"><path d="M3 4h18v2H3V4zm0 12h18v2H3v-2zm0-6h18v2H3v-2z"/></svg>
+      حراج
+    </a>
+  </div>
+
+  <div class="contact-numbers" aria-label="أرقام التواصل واتساب">
+    <a href="https://wa.me/966544298850" target="_blank" rel="noopener noreferrer" aria-label="واتساب 0544298850">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" >
+        <path d="M16.5 7a5 5 0 1 1-7 7l-3 1 1-3a5 5 0 0 1 8-5z" />
+      </svg>
+      0544298850
+    </a>
+    <a href="https://wa.me/966504214480" target="_blank" rel="noopener noreferrer" aria-label="واتساب 0504214480">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" >
+        <path d="M16.5 7a5 5 0 1 1-7 7l-3 1 1-3a5 5 0 0 1 8-5z" />
+      </svg>
+      0504214480
+    </a>
+    <a href="https://wa.me/966548420912" target="_blank" rel="noopener noreferrer" aria-label="واتساب 0548420912">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" >
+        <path d="M16.5 7a5 5 0 1 1-7 7l-3 1 1-3a5 5 0 0 1 8-5z" />
+      </svg>
+      0548420912
     </a>
   </div>
 </footer>
 
 <script>
-  // بيانات البرندات (تأكد من وضع الشعارات في images/brands/)
-  const brands = [
-    { name: "MSD", logo: "images/brands/msd.png", link: "brands/msd.html" },
-    { name: "EXCEED", logo: "images/brands/exceed.png", link: "brands/exceed.html" },
-    { name: "BTR", logo: "images/brands/btr.png", link: "brands/btr.html" },
-    { name: "TEXAS SPEED", logo: "images/brands/texas_speed.png", link: "brands/texas_speed.html" },
-    { name: "aFe", logo: "images/brands/afe.png", link: "brands/afe.html" },
-    { name: "VCM", logo: "images/brands/vcm.png", link: "brands/vcm.html" },
-    { name: "LUCAS زيوت", logo: "images/brands/lucas.png", link: "brands/lucas.html" },
-    { name: "EPMAN اقفال كبوت", logo: "images/brands/epman.png", link: "brands/epman.html" },
-    { name: "ARP", logo: "images/brands/arp.png", link: "brands/arp.html" },
-    { name: "AEM", logo: "images/brands/aem.png", link: "brands/aem.html" },
-    { name: "MAHLE", logo: "images/brands/mahle.png", link: "brands/mahle.html" },
-    { name: "ACDELCO", logo: "images/brands/acdelco.png", link: "brands/acdelco.html" },
-    { name: "NGK", logo: "images/brands/ngk.png", link: "brands/ngk.html" },
-    { name: "LINGENFELTER", logo: "images/brands/lingenfelter.png", link: "brands/lingenfelter.html" },
-    { name: "GM", logo: "images/brands/gm.png", link: "brands/gm.html" },
-    { name: "ROLLMASTER", logo: "images/brands/rollmaster.png", link: "brands/rollmaster.html" },
-    { name: "VP", logo: "images/brands/vp.png", link: "brands/vp.html" },
-    { name: "BOSCH", logo: "images/brands/bosch.png", link: "brands/bosch.html" },
-    { name: "SPECTRE", logo: "images/brands/spectre.png", link: "brands/spectre.html" },
-    { name: "BOOST", logo: "images/brands/boost.png", link: "brands/boost.html" },
-    { name: "Super Pro", logo: "images/brands/super_pro.png", link: "brands/super_pro.html" },
-    { name: "PAC", logo: "images/brands/pac.png", link: "brands/pac.html" },
-    { name: "Dicom", logo: "images/brands/dicom.png", link: "brands/dicom.html" },
-    { name: "POWER", logo: "images/brands/power.png", link: "brands/power.html" },
-    { name: "TI Automotive", logo: "images/brands/ti_automotive.png", link: "brands/ti_automotive.html" },
-    { name: "MELLING", logo: "images/brands/melling.png", link: "brands/melling.html" },
-    { name: "AEROMOTIVE", logo: "images/brands/aeromotive.png", link: "brands/aeromotive.html" },
-    { name: "FTE", logo: "images/brands/fte.png", link: "brands/fte.html" },
-    { name: "K&N", logo: "images/brands/kn.png", link: "brands/kn.html" },
-    { name: "Lufii", logo: "images/brands/lufii.png", link: "brands/lufii.html" },
-    { name: "SNOW", logo: "images/brands/snow.png", link: "brands/snow.html" },
-    { name: "McLeod", logo: "images/brands/mcleod.png", link: "brands/mcleod.html" },
-    { name: "TCL", logo: "images/brands/tcl.png", link: "brands/tcl.html" },
-    { name: "DRC", logo: "images/brands/drc.png", link: "brands/drc.html" },
-    { name: "BILSTEIN", logo: "images/brands/bilstein.png", link: "brands/bilstein.html" },
-    { name: "COMETIC", logo: "images/brands/cometic.png", link: "brands/cometic.html" },
-    { name: "Hptuners", logo: "images/brands/hptuners.png", link: "brands/hptuners.html" },
-    { name: "King Springs", logo: "images/brands/king_springs.png", link: "brands/king_springs.html" },
-    { name: "VOGTLAND", logo: "images/brands/vogtland.png", link: "brands/vogtland.html" },
-    { name: "SCT X4", logo: "images/brands/sct_x4.png", link: "brands/sct_x4.html" },
-    { name: "MOPAR", logo: "images/brands/mopar.png", link: "brands/mopar.html" },
-    { name: "LUkRepSet", logo: "images/brands/lukrepset.png", link: "brands/lukrepset.html" }
-  ];
+// بيانات القطع (تقدر تضيف أو تعدل حسب الموجود عندك)
+const parts = [
+  { code: "MSD1234", name: "فلتر هواء MSD" },
+  { code: "BTR5678", name: "كويل إشتعال BTR" },
+  { code: "ACDELCO4321", name: "بطارية ACDELCO" },
+  { code: "NGK9876", name: "شمعات NGK" },
+  { code: "MAHLE1357", name: "مكبس MAHLE" },
+  // أضف باقي القطع هنا حسب بياناتك
+];
 
-  // بيانات القطع (كمثال)
-  const parts = [
-    { brand: "MSD", name: "فلتر هواء", partNumber: "MSD123" },
-    { brand: "BTR", name: "بلف وقود", partNumber: "BTR456" },
-    { brand: "aFe", name: "شمعات", partNumber: "AFE789" },
-    // أضف باقي القطع هنا حسب الحاجة
-  ];
+// عرض النتائج
+function searchParts() {
+  const query = document.getElementById("searchBox").value.trim().toLowerCase();
+  const container = document.getElementById("resultsContainer");
+  container.innerHTML = "";
 
-  function buildBrands(filteredBrands = brands) {
-    const container = document.querySelector(".brands-container");
-    container.innerHTML = ""; // تفريغ الحاوية
-
-    filteredBrands.forEach(brand => {
-      const brandLink = document.createElement("a");
-      brandLink.href = brand.link;
-      brandLink.className = "brand-box";
-      brandLink.setAttribute("aria-label", `الانتقال إلى صفحة ${brand.name}`);
-
-      const logoImg = document.createElement("img");
-      logoImg.src = brand.logo;
-      logoImg.alt = `شعار ${brand.name}`;
-      logoImg.className = "brand-logo";
-
-      const nameDiv = document.createElement("div");
-      nameDiv.className = "brand-name";
-      nameDiv.textContent = brand.name;
-
-      brandLink.appendChild(logoImg);
-      brandLink.appendChild(nameDiv);
-      container.appendChild(brandLink);
-    });
+  if (!query) {
+    container.innerHTML = "<p style='text-align:center; color:#777;'>ابدأ بالكتابة للبحث عن القطع...</p>";
+    return;
   }
 
-  // وظيفة بحث داخل القطع (تصفية حسب اسم أو رقم القطعة)
-  function searchParts() {
-    const input = document.getElementById("searchInput");
-    input.addEventListener("input", () => {
-      const query = input.value.trim().toLowerCase();
+  const filtered = parts.filter(part =>
+    part.code.toLowerCase().includes(query) ||
+    part.name.toLowerCase().includes(query)
+  );
 
-      if (!query) {
-        buildBrands(brands);
-        return;
-      }
-
-      // فلترة القطع التي تطابق البحث
-      const matchedBrandsNames = new Set();
-
-      parts.forEach(part => {
-        if (
-          part.name.toLowerCase().includes(query) ||
-          part.partNumber.toLowerCase().includes(query)
-        ) {
-          matchedBrandsNames.add(part.brand);
-        }
-      });
-
-      // بناء قائمة البرندات بناءً على نتائج البحث
-      const filteredBrands = brands.filter(brand => matchedBrandsNames.has(brand.name));
-
-      if (filteredBrands.length > 0) {
-        buildBrands(filteredBrands);
-      } else {
-        // إذا ما في تطابق، فرغ الحاوية واظهر رسالة
-        const container = document.querySelector(".brands-container");
-        container.innerHTML = "<p style='text-align:center; color:#e74c3c; font-weight:600;'>لا توجد نتائج مطابقة</p>";
-      }
-    });
+  if (filtered.length === 0) {
+    container.innerHTML = "<p style='text-align:center; color:#777;'>لا توجد نتائج مطابقة.</p>";
+    return;
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    buildBrands();
-    searchParts();
+  filtered.forEach(part => {
+    const div = document.createElement("div");
+    div.className = "result-item";
+    div.innerHTML = `<div class="result-name">${part.name}</div><div class="result-code">رمز القطعة: ${part.code}</div>`;
+    container.appendChild(div);
   });
+}
+
+// بيانات البراندات مع روابط وأسماء وشعارات (الشعارات ترفعها في images/brands/)
+const brands = [
+  { name: "MSD", logo: "images/brands/msd.png", link: "brands/msd.html" },
+  { name: "EXCEED", logo: "images/brands/exceed.png", link: "brands/exceed.html" },
+  { name: "BTR", logo: "images/brands/btr.png", link: "brands/btr.html" },
+  { name: "TEXAS SPEED", logo: "images/brands/texas_speed.png", link: "brands/texas_speed.html" },
+  { name: "aFe", logo: "images/brands/afe.png", link: "brands/afe.html" },
+  { name: "VCM", logo: "images/brands/vcm.png", link: "brands/vcm.html" },
+  { name: "LUCAS زيوت", logo: "images/brands/lucas.png", link: "brands/lucas.html" },
+  { name: "EPMAN اقفال كبوت", logo: "images/brands/epman.png", link: "brands/epman.html" },
+  { name: "ARP", logo: "images/brands/arp.png", link: "brands/arp.html" },
+  { name: "AEM", logo: "images/brands/aem.png", link: "brands/aem.html" },
+  { name: "MAHLE", logo: "images/brands/mahle.png", link: "brands/mahle.html" },
+  { name: "ACDELCO", logo: "images/brands/acdelco.png", link: "brands/acdelco.html" },
+  { name: "NGK", logo: "images/brands/ngk.png", link: "brands/ngk.html" },
+  { name: "LINGENFELTER", logo: "images/brands/lingenfelter.png", link: "brands/lingenfelter.html" },
+  { name: "GM", logo: "images/brands/gm.png", link: "brands/gm.html" },
+  { name: "ROLLMASTER", logo: "images/brands/rollmaster.png", link: "brands/rollmaster.html" },
+  { name: "VP", logo: "images/brands/vp.png", link: "brands/vp.html" },
+  { name: "BOSCH", logo: "images/brands/bosch.png", link: "brands/bosch.html" },
+  { name: "SPECTRE", logo: "images/brands/spectre.png", link: "brands/spectre.html" },
+  { name: "BOOST", logo: "images/brands/boost.png", link: "brands/boost.html" },
+  { name: "Super Pro", logo: "images/brands/super_pro.png", link: "brands/super_pro.html" },
+  { name: "PAC", logo: "images/brands/pac.png", link: "brands/pac.html" },
+  { name: "Dicom", logo: "images/brands/dicom.png", link: "brands/dicom.html" },
+  { name: "POWER", logo: "images/brands/power.png", link: "brands/power.html" },
+  { name: "TI Automotive", logo: "images/brands/ti_automotive.png", link: "brands/ti_automotive.html" },
+  { name: "MELLING", logo: "images/brands/melling.png", link: "brands/melling.html" },
+  { name: "AEROMOTIVE", logo: "images/brands/aeromotive.png", link: "brands/aeromotive.html" },
+  { name: "FTE", logo: "images/brands/fte.png", link: "brands/fte.html" },
+  { name: "K&N", logo: "images/brands/kn.png", link: "brands/kn.html" },
+  { name: "Lufii", logo: "images/brands/lufii.png", link: "brands/lufii.html" },
+  { name: "SNOW", logo: "images/brands/snow.png", link: "brands/snow.html" },
+  { name: "McLeod", logo: "images/brands/mcleod.png", link: "brands/mcleod.html" },
+  { name: "TCL", logo: "images/brands/tcl.png", link: "brands/tcl.html" },
+  { name: "DRC", logo: "images/brands/drc.png", link: "brands/drc.html" },
+  { name: "BILSTEIN", logo: "images/brands/bilstein.png", link: "brands/bilstein.html" },
+  { name: "COMETIC", logo: "images/brands/cometic.png", link: "brands/cometic.html" },
+  { name: "Hptuners", logo: "images/brands/hptuners.png", link: "brands/hptuners.html" },
+  { name: "King Springs", logo: "images/brands/king_springs.png", link: "brands/king_springs.html" },
+  { name: "VOGTLAND", logo: "images/brands/vogtland.png", link: "brands/vogtland.html" },
+  { name: "SCT X4", logo: "images/brands/sct_x4.png", link: "brands/sct_x4.html" },
+  { name: "MOPAR", logo: "images/brands/mopar.png", link: "brands/mopar.html" },
+  { name: "LUkRepSet", logo: "images/brands/lukrepset.png", link: "brands/lukrepset.html" }
+];
+
+function buildBrands() {
+  const container = document.querySelector(".brands-container");
+  container.innerHTML = ""; // تفريغ المحتوى
+
+  brands.forEach(brand => {
+    const brandDiv = document.createElement("a");
+    brandDiv.href = brand.link;
+    brandDiv.className = "brand-box";
+    brandDiv.setAttribute("aria-label", `صفحة ${brand.name}`);
+
+    const logoImg = document.createElement("img");
+    logoImg.src = brand.logo;
+    logoImg.alt = `شعار ${brand.name}`;
+    logoImg.className = "brand-logo";
+
+    const nameDiv = document.createElement("div");
+    nameDiv.className = "brand-name";
+    nameDiv.textContent = brand.name;
+
+    brandDiv.appendChild(logoImg);
+    brandDiv.appendChild(nameDiv);
+    container.appendChild(brandDiv);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  buildBrands();
+  searchParts();
+});
 </script>
 
 </body>
